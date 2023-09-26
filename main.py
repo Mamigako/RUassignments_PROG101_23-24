@@ -1,27 +1,25 @@
-from submodule import extract_first_number_from_string
+from submodule import decimal_to_binary
+
 
 def main():
-    
-    run_like_hell_ehem_I_mean_run_like_samples()
-
-    run_interactive()
-
-def run_like_hell_ehem_I_mean_run_like_samples():
-    search_string = input()
-    first_number = extract_first_number_from_string(search_string)
-    print(first_number)
+    # run()
+    run_with_ui()
 
 
-def run_interactive():
-    demand = "Numbers! Give me numbers! But hide them inside a string for me to find: "
-    search_string = input(demand)
-
-    first_number = extract_first_number_from_string(search_string)
-
-    if first_number == -1:
-        print("Hey! There is no number in this string >:(")
-    else:
-        print(f"Delicious! {first_number}, I see you!")
+def run():
+    number_as_decimal = int(input())
+    binary_representation = decimal_to_binary(number_as_decimal)
+    print(binary_representation)
 
 
-main()
+def run_with_ui():
+    number_as_decimal = int(input("Enter a number to convert: "))
+    binary_representation = decimal_to_binary(number_as_decimal)
+    print(
+        f"The binary representation of {number_as_decimal}",
+        f"is {binary_representation}.",
+    )
+
+
+if __name__ == "__main__":
+    main()

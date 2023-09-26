@@ -1,9 +1,12 @@
-def extract_first_number_from_string(string_to_search):
-    import re
-    pattern = r'\d+'
-    match = re.search(pattern, string_to_search)
-    if match:
-        matched_number = match.group()        
-        return int(matched_number)
-    else:
-        return -1
+def decimal_to_binary(decimal: int) -> str:
+    """Converts an integer from decimal to its binary representation."""
+    bin_string = ""
+
+    while decimal // 2 != 0:
+
+        remainder = decimal % 2
+        bin_string += str(remainder)
+        decimal = decimal // 2
+    if decimal // 2 == 0:
+        bin_string += (str(decimal % 2))
+    return bin_string[::-1]
