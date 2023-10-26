@@ -133,5 +133,4 @@ def print_doc(doc_num, long_strings):
         print(long_strings[int(doc_num)-1])
     
 
-
 main()
