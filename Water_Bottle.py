@@ -1,13 +1,13 @@
 class WaterBottle:
 
-    def init(self, max_capacity=2):
+    def __init__(self, max_capacity=2):
         self.max_capacity = max_capacity
         self.current_contents = 0
 
-    def fill(self) -> None:
+    def __fill__(self) -> None:
         self.current_contents = self.max_capacity
 
-    def drink(self, amount: float) -> float:
+    def __drink__(self, amount: float) -> float:
         if amount < 0:
             return 0
         elif self.current_contents <= amount:
@@ -18,5 +18,5 @@ class WaterBottle:
             self.current_contents -= amount
             return amount
 
-    def str(self) -> str:
+    def __str__(self) -> str:
         return f"The bottle currently holds {self.current_contents:.1f}L of water."
