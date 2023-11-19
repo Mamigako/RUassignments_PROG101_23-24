@@ -1,12 +1,23 @@
-This is an example document collection file.
-It contains three documents.
-This is text from the first document.
-<END OF DOCUMENT>
-This is text from the second document. Each document is
-of variable length.
-<END OF DOCUMENT>
-And now we are in the third document, which is indeed
-the "largest" one
-measured in the length of the
-text that appears in the document.
-<END OF DOCUMENT>
+
+| Expression     | Decimal  | Hex        |
+------------------------------------------
+|  (char) TMax   |  127     |  0x7f      |
+|  (char) 0      |    0     |  0x00      |
+|  (short)       |  133     |  0x85      |
+|  (short)       |  2679    |  0x0a77    |
+|  sa            |  -274    |  0xfeee    |
+|  cb            |  -18     |  0xee      |
+|  sc            |  -18     |  0xffee    |
+|  usd           |  238     |  0xee      |
+|  use           |  7       |  0x7       |
+|  sf            |  -1      |  0xffff    |
+|  sg            |  -2304   |  0xf700 
+
+
+
+01010110000
+10110110000
+00000111110
+-29/32
++19/128
+NaN
